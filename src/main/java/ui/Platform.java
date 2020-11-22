@@ -8,6 +8,7 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.time.Duration;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public interface Platform {
@@ -35,6 +36,15 @@ public interface Platform {
         Container container = Container.getInstance();
         container.getPlatform().getDriver().quit();
     };
+
+    default void setContextByIndex(int contextIndex) {
+        AppiumDriver driver = Container.getInstance().getPlatform().getDriver();
+        Set<String> contextNames = driver.getContextHandles();
+        for (String contextName : contextNames) {
+            System.out.printf("CONTEXT ARRAY [%s], object: %s\n", contextIndex, contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+        }
+        driver.context(contextNames.toArray()[contextIndex].toString());
+    }
 
     // Скроллит экран по заданному Direction
     default void swipeScreen(Direction dir) {
@@ -102,7 +112,7 @@ public interface Platform {
         RIGHT;
     }
     enum CurrentPlatform {
-        ANDROID, IOS
+        ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
     }
 
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.Config;
 import ui.Platform;
 
-public class IOS implements Platform {
+public class IOS_native implements Platform {
 
     // Создает уникальный для платформы драйвер
     private AppiumDriver driver = new IOSDriver(Config.getAppiumUrl(), getCapabilities());
@@ -35,7 +35,7 @@ public class IOS implements Platform {
 
     @Override
     public CurrentPlatform getCurrentPlatformName() {
-        return CurrentPlatform.IOS;
+        return CurrentPlatform.IOS_NATIVE;
     }
 
 }

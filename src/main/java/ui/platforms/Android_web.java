@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.Config;
 import ui.Platform;
 
-public class Android implements Platform {
+public class Android_web implements Platform {
 
     // Создает уникальный для платформы драйвер
     private AppiumDriver driver = new AndroidDriver(Config.getAppiumUrl(), getCapabilities());
@@ -27,15 +27,13 @@ public class Android implements Platform {
         Capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         Capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Config.getPlatformVersion());
         Capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Config.getDeviceName());
-        Capabilities.setCapability("appPackage", Config.getAndroidAppPackage());
-        Capabilities.setCapability("appActivity", Config.getAndroidAppMainActivity());
-        Capabilities.setCapability(MobileCapabilityType.APP, Config.getAndroidAppPathLocal());
+        Capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
         return Capabilities;
     }
 
     @Override
     public CurrentPlatform getCurrentPlatformName() {
-        return CurrentPlatform.ANDROID;
+        return CurrentPlatform.ANDROID_NATIVE;
     }
 
 }

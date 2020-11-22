@@ -8,13 +8,13 @@ public abstract class Config {
 
     //TODO: Получать значения из конфига мавена
     final private static String APPIUM_URL = "http://127.0.0.1:4723/wd/hub";
-    final private static String APPIUM_VERSION = "1.18.3";
+    final private static String APPIUM_VERSION = "1.18.0";
     final private static String PLATFORM_NAME = "Android";
     final private static String PLATFORM_VERSION = "10.0";
     final private static String DEVICE_NAME = "Device";
     final private static String ANDROID_APP_PACKAGE = "ru.kinopoisk.dev";
     final private static String ANDROID_APP_MAIN_ACTIVITY = "ru.kinopoisk.presentation.screen.tabs.RedirectTabsIntentsActivity";
-    final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/Desktop/test.apk");
+    final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/test.apk");
 
     public static URL getAppiumUrl() {
         URL appiumServer = null;

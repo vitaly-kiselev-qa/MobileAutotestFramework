@@ -1,9 +1,9 @@
 package steps.pages;
 
 import io.cucumber.java.After;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
-import ui.platforms.Android;
+import ui.platforms.Android_native;
 import ui.Container;
 import ui.Platform;
 
@@ -18,20 +18,21 @@ public class MobileBaseActions {
 
    Container container = Container.getInstance();
 
-   @Given("Start the app")
-   public void startApp() throws Throwable {
+   @Before
+   public void startApp() {
 
       /*
       Обязательный шаг перед началом любого теста, т.к. здесь запускается нужный драйвер
       TODO: Сделать так, чтобы метод понимал, когда кончился Splash-screen перед прохождением др. шагов
        */
 
-      container.runPlatform(new Android());
+      container.runPlatform(new Android_native());
       container.getPlatform().timeOut(5);
+      container.getPlatform().setContextByIndex(0);
    }
 
-   @Then("Stop the app")
-   public void stopApp() throws Throwable {
+   @After
+   public void stopApp() {
 
       /*
       Вырубаем драйвер после теста - закрываем приложение
