@@ -21,9 +21,12 @@ public class PageElements implements Page {
                     Page.getLocatorByResourceId("ios_id")),
 
     // wiki example
-            wiki_skip_btn =
-                    Page.setLocators(Page.getLocatorByResourceId("fragment_onboarding_skip_button"),
-                    Page.getLocatorByResourceId("fragment_onboarding_skip_button"));
+            wiki_skip_btn = Page.setLocators(
+                    Page.getLocatorByResourceId("fragment_onboarding_skip_button"),
+                    Page.getLocatorByResourceId("fragment_onboarding_skip_button")),
+            wiki_feed_container = Page.setLocators(
+                    Page.getLocatorByResourceId("fragment_feed_feed"),
+                    Page.getLocatorByResourceId("fragment_feed_feed"));
 }
 
 

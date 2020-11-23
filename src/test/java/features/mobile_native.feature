@@ -1,14 +1,20 @@
 # language: en
 
 @smoke
-Feature: Mobile test
+Feature: Wiki example tests
 
-  Scenario: Try to fix the test ONE2
-    When Try to swipe
-    Then Try to swipe
-    Then Try to swipe
+  Scenario: Swipe onboarding (fail)
+    When Swipe "Left"
+    Then Feed exists "false"
+    Then Feed exists "true"
+    When Swipe "Right"
 
-  Scenario: Try to fix the test TWO2
-    When Try to swipe
+  Scenario: Skip onboarding
+    When Push the skip btn
+    Then Feed exists "true"
+    When Swipe "Down"
+
+  Scenario: Push the button (fail)
+    When Swipe "Down"
     Then Push the button one
-    Then Try to swipe
+    Then Swipe "Up"

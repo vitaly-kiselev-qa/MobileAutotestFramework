@@ -5,7 +5,7 @@ import ui.platforms.Android_web;
 import ui.platforms.IOS_native;
 
 public class Container {
-    Platform platform;
+    private Platform platform;
 
     //Singleton
     private static Container instance;
@@ -18,7 +18,7 @@ public class Container {
     }
 
     // Инициализирует платформу контейнера нужной платформой, ссылаясь на переменную в config
-    public void setPlatform(){
+    private void setPlatform(){
         switch (Config.getCurrentPlatformName()) {
             case ANDROID_NATIVE: platform = new Android_native(); break;
             case ANDROID_WEB: platform = new Android_web(); break;

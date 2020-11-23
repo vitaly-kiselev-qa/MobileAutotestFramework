@@ -17,7 +17,7 @@ public interface Page {
         return platformIndex;
     }
 
-    // Записывает локарторы для всех платформ в массив и отдает нужный по индексу платформы
+    // Записывает локаторы для всех платформ в массив и отдает нужный по индексу платформы
     static SelenideElement setLocators(SelenideElement Android, SelenideElement ios){
         SelenideElement[] array = {Android, ios};
         return array[Page.switchLocator()];

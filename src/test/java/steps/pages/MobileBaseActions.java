@@ -36,9 +36,16 @@ public class MobileBaseActions {
       container.getPlatform().quitDriver();
    }
 
-   @Then("Try to swipe")
-   public void swipeScreen() {
+   @Then("Swipe {string}")
+   public void swipeScreen(String string) {
 
-      container.getPlatform().swipeScreen(Platform.Direction.LEFT);
+      switch (string.toLowerCase()) {
+         case "left": container.getPlatform().swipeScreen(Platform.Direction.LEFT); break;
+         case "right": container.getPlatform().swipeScreen(Platform.Direction.RIGHT); break;
+         case "up": container.getPlatform().swipeScreen(Platform.Direction.UP); break;
+         case "down": container.getPlatform().swipeScreen(Platform.Direction.DOWN); break;
+         default: System.out.print("ERROR: unknown direction");
+      }
+
    }
 }
