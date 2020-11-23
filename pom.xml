@@ -8,7 +8,7 @@
     <artifactId>allureCucumberSelenide-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <url>https://github.com/SergeyITT/AutottestsSample</url>
+    <url>https://github.com/Ivansushkin/MobileAutotestFramework_bySu</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,16 +19,18 @@
         <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
         <maven.project.info.reports.plugin.version>3.1.1</maven.project.info.reports.plugin.version>
         <maven.site.plugin.version>3.9.1</maven.site.plugin.version>
+        <jaxb.api.version>2.3.1</jaxb.api.version>
+        <slf4j.version>1.8.0-beta4</slf4j.version>
+        <appium.java.client.version>7.3.0</appium.java.client.version>
         <allure.maven.version>2.10.0</allure.maven.version>
         <aspectj.version>1.8.13</aspectj.version>
         <allure.version>2.13.6</allure.version>
         <cucumber.version>4.8.1</cucumber.version>
         <junit.version>4.13.1</junit.version>
-        <slf4j.version>1.8.0-beta4</slf4j.version>
+        <selenide.version>5.15.1</selenide.version>
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -45,19 +47,19 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>5.15.1</version>
+            <version>${selenide.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>7.3.0</version>
+            <version>${appium.java.client.version}</version>
         </dependency>
 
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <version>${jaxb.api.version}</version>
         </dependency>
 
         <dependency>
@@ -111,7 +113,7 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
-                        <version>1.8.13</version>
+                        <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>

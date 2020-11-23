@@ -21,24 +21,15 @@ public class MobileBaseActions {
    @Before
    public void startApp() {
 
-      /*
-      Обязательный шаг перед началом любого теста, т.к. здесь запускается нужный драйвер
-      TODO: Сделать так, чтобы метод понимал, когда кончился Splash-screen перед прохождением др. шагов
-       */
+      //TODO: Сделать так, чтобы метод понимал, когда кончился Splash-screen перед прохождением др. шагов
 
-      container.runPlatform(new Android_native());
+      container.runPlatform();
       container.getPlatform().timeOut(5);
       container.getPlatform().setContextByIndex(0);
    }
 
    @After
    public void stopApp() {
-
-      /*
-      Вырубаем драйвер после теста - закрываем приложение
-      В большинстве случаев - обязательны шаг в конце теста
-      Временно сделал тайм аут перед закрытием, чтобы отслеживать последний шаг
-      */
 
       Container container = Container.getInstance();
       container.getPlatform().timeOut(5);
@@ -48,10 +39,6 @@ public class MobileBaseActions {
    @Then("Try to swipe")
    public void swipeScreen() {
 
-      /*
-      Свайпает экран в сторону. Метод лежит в src\main\java\moblie\Actions.java
-      TODO: Запилить возможность выбора стороны
-       */
       container.getPlatform().swipeScreen(Platform.Direction.LEFT);
    }
 }

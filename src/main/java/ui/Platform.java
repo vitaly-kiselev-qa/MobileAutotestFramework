@@ -19,8 +19,7 @@ public interface Platform {
     // Отдает настроенные Capabilities по Config
     DesiredCapabilities getCapabilities();
 
-    // Отдает enum используемой платформы
-    CurrentPlatform getCurrentPlatformName();
+    Config.Platforms checkPlatform();
 
     // Получает инстанс Container и запускает хранящийся там драйвер
     default void runDriver() {
@@ -40,8 +39,10 @@ public interface Platform {
     default void setContextByIndex(int contextIndex) {
         AppiumDriver driver = Container.getInstance().getPlatform().getDriver();
         Set<String> contextNames = driver.getContextHandles();
+        int i = 0;
         for (String contextName : contextNames) {
-            System.out.printf("CONTEXT ARRAY [%s], object: %s\n", contextIndex, contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+            System.out.printf("CONTEXT ARRAY [%s], object: %s\n", i, contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+            i++;
         }
         driver.context(contextNames.toArray()[contextIndex].toString());
     }
@@ -111,8 +112,6 @@ public interface Platform {
         LEFT,
         RIGHT;
     }
-    enum CurrentPlatform {
-        ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
-    }
+
 
 }

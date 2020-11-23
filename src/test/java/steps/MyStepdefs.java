@@ -22,7 +22,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class MyStepdefs {
 
 
-    @То("^Я ввожу \"([^\"]*)\" поле поиска$")
+    /*@То("^Я ввожу \"([^\"]*)\" поле поиска$")
     public void яВвожуПолеПоиска(String text)  {
         $x("//input[@name='q']").sendKeys(text);
     }
@@ -86,5 +86,5 @@ public class MyStepdefs {
     @And("^I check that the list of results on yandex page is not empty$")
     public void iCheckThatTheListOfResultsOnYandexPageIsNotEmpty(){
         $$x("//li[@class='serp-item']").shouldHave(CollectionCondition.sizeGreaterThan(0));
-    }
+    }*/
 }

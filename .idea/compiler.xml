@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AllureCucumberSelenide" />
         <module name="allureCucumberSelenide-test" />
+        <module name="MobileAutotestFramework_bySu" />
         <module name="AutottestsSample" />
       </profile>
     </annotationProcessing>

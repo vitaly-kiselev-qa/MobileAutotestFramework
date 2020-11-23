@@ -1,7 +1,8 @@
 package ui;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
+import ui.platforms.Android_native;
+import ui.platforms.Android_web;
+import ui.platforms.IOS_native;
 
 public class Container {
     Platform platform;
@@ -16,23 +17,27 @@ public class Container {
         return instance;
     }
 
-    // Инициализирует платформу контейнера необходимой платформой
-    public void setPlatform(Platform platform){
-        System.out.print("WORKLOG: Container.setPlatform\n");
-        this.platform = platform;
+    // Инициализирует платформу контейнера нужной платформой, ссылаясь на переменную в config
+    public void setPlatform(){
+        switch (Config.getCurrentPlatformName()) {
+            case ANDROID_NATIVE: platform = new Android_native(); break;
+            case ANDROID_WEB: platform = new Android_web(); break;
+            case IOS_NATIVE: platform = new IOS_native(); break;
+            case IOS_WEB: //platform = new IOS_web(); break;
+            default: System.out.print("ERROR: UNKNOWN PLATFORM"); break;
+        }
+        System.out.print("POINT: Container.setPlatform: " + platform.checkPlatform() + "\n");
     }
 
-    // Отдает платформу, записанную в контейнер
+    // Отдает инициализированную контейнером платформу
     public Platform getPlatform(){
-        System.out.print("WORKLOG: Container.getPlatform\n");
         return platform;
     }
 
-    // Получает Singleton контейнера и запускает записанную в него платформу
-    public void runPlatform(Platform platform) {
-        Container container = Container.getInstance();
-        container.setPlatform(platform);
-        container.getPlatform().runDriver();
-        System.out.print("WORKLOG: Container.runPlatform\n");
+    // Запускает инициализированную контейнером платформу
+    public void runPlatform() {
+        setPlatform();
+        platform.runDriver();
+        System.out.print("POINT: Container.runPlatform: " + platform.checkPlatform() + "\n");
     }
 }

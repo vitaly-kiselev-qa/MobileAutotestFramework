@@ -1,4 +1,4 @@
-package steps.pages.PageExample;
+package steps.pages.PageExample_native;
 
 import io.cucumber.java.en.When;
 
@@ -6,18 +6,25 @@ import io.cucumber.java.en.When;
 public class PageActions {
 
     @When("Push the button one")
-    public void pushTheBtnOne()  throws Throwable {
+    public void pushTheBtnOne() {
         PageElements.button_one.click();
     }
 
     @When("Push the field one")
-    public void pushTheFieldOne()  throws Throwable {
+    public void pushTheFieldOne() {
         PageElements.text_field_one.click();
     }
 
-    @When("Send value {string} the field two")  // "([^"]*) - String input?, (\\d+) - int input?
-    public void pushTheFieldTwo(String value) throws Throwable  {
+    @When("Send value {string} the field two")
+    public void pushTheFieldTwo(String value) {
         PageElements.text_field_one.click();
+    }
+
+    // wiki example
+
+    @When("Push the skip btn")
+    public void pushTheSkipBtn() {
+        PageElements.wiki_skip_btn.click();
     }
 
 

@@ -3,6 +3,7 @@ package ui.platforms;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.Config;
 import ui.Platform;
@@ -10,12 +11,17 @@ import ui.Platform;
 public class Android_web implements Platform {
 
     // Создает уникальный для платформы драйвер
-    private AppiumDriver driver = new AndroidDriver(Config.getAppiumUrl(), getCapabilities());
+    private AppiumDriver driver = new AppiumDriver(Config.getAppiumUrl(), getCapabilities());
 
     // Геттер драйвера платформы
     @Override
     public AppiumDriver getDriver() {
         return driver;
+    }
+
+    @Override
+    public Config.Platforms checkPlatform() {
+        return Config.Platforms.ANDROID_WEB;
     }
 
     // Геттер уникального для платформы набора Capabilities
@@ -31,9 +37,6 @@ public class Android_web implements Platform {
         return Capabilities;
     }
 
-    @Override
-    public CurrentPlatform getCurrentPlatformName() {
-        return CurrentPlatform.ANDROID_NATIVE;
-    }
+
 
 }

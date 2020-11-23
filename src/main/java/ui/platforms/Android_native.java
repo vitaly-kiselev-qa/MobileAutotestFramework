@@ -18,6 +18,11 @@ public class Android_native implements Platform {
         return driver;
     }
 
+    @Override
+    public Config.Platforms checkPlatform() {
+        return Config.Platforms.ANDROID_NATIVE;
+    }
+
     // Геттер уникального для платформы набора Capabilities
     @Override
     public DesiredCapabilities getCapabilities() {
@@ -33,9 +38,5 @@ public class Android_native implements Platform {
         return Capabilities;
     }
 
-    @Override
-    public CurrentPlatform getCurrentPlatformName() {
-        return CurrentPlatform.ANDROID_NATIVE;
-    }
 
 }

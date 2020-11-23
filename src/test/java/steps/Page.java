@@ -9,9 +9,9 @@ public interface Page {
     // Отдает индекс используемой в конфиге платформы
     static int switchLocator() {
         int platformIndex = 0;
-        switch (Config.getPlatformName()) {
-            case ANDROID: platformIndex = 0; break;
-            case IOS: platformIndex = 1; break;
+        switch (Config.getCurrentPlatformName()) {
+            case ANDROID_NATIVE: platformIndex = 0; break;
+            case IOS_NATIVE: platformIndex = 1; break;
             default: System.out.print("ERROR: Undefined platform. Android set as default platform"); break;
         }
         return platformIndex;
