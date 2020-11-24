@@ -1,14 +1,15 @@
 package steps.pages.PageExample_web;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
-import steps.pages.PageExample_native.PageElements;
+import ui.Container;
 
 public class PageActions {
 
+    Container container = Container.getInstance();
+
     @Given("Open url {string}")
-    public void openUrl(String url)  throws Throwable {
-        PageElements.button_one.click();
+    public void openUrl(String url) {
+        container.getPlatform().getDriver().get(url);
     }
 
 }

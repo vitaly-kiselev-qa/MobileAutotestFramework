@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "steps",
-        tags = "@smoke",
+        tags = "@web",
         plugin = "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
 )
 public class RunTest {

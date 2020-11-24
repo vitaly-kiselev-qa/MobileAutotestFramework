@@ -37,6 +37,4 @@ public class Android_native implements Platform {
         Capabilities.setCapability(MobileCapabilityType.APP, Config.getAndroidAppPathLocal());
         return Capabilities;
     }
-
-
 }

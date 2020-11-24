@@ -6,15 +6,16 @@ import java.nio.file.Paths;
 
 public abstract class Config {
 
-    //TODO: Получать значения из конфига мавена
-    final private static String APPIUM_URL = "http://127.0.0.1:4723/wd/hub";
-    final private static String APPIUM_VERSION = "1.18.3";
-    final private static String PLATFORM_NAME = "Android_native";
-    final private static String PLATFORM_VERSION = "10.0";
-    final private static String DEVICE_NAME = "Device";
-    final private static String ANDROID_APP_PACKAGE = "org.wikipedia";
-    final private static String ANDROID_APP_MAIN_ACTIVITY = "org.wikipedia.main.MainActivity";
+    final private static String PLATFORM_NAME = "Android_web"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
+    final private static String DEVICE_NAME = "Device"; // Random
+    final private static String PLATFORM_VERSION = "10.0"; // Current device OS version
+    final private static String WEB_BROWSER_NAME = "Chrome"; // Chrome, FF, Edge
+    final private static String WEB_BROWSER_VERSION = "86"; // Check installed browser version
+    final private static String ANDROID_APP_PACKAGE = "org.wikipedia"; // Android only. See package checker
+    final private static String ANDROID_APP_MAIN_ACTIVITY = "org.wikipedia.main.MainActivity"; // Android only. See - package checker
     final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/Desktop/wiki.apk");
+    final private static String APPIUM_URL = "http://127.0.0.1:4723/wd/hub"; // Const, don't touch
+    final private static String APPIUM_VERSION = "1.18.3"; // See Appium server version
 
     public static URL getAppiumUrl() {
         URL appiumServer = null;
@@ -63,6 +64,12 @@ public abstract class Config {
     }
     public static String getAndroidAppPathLocal() {
         return Paths.get(ANDROID_APP_PATH_LOCAL).toAbsolutePath().toString();
+    }
+    public static String getWebBrowserName() {
+        return WEB_BROWSER_NAME;
+    }
+    public static String getWebBrowserVersion() {
+        return WEB_BROWSER_VERSION;
     }
 
     public enum Platforms {

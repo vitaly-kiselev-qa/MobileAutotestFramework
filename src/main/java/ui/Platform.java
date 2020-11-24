@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.time.Duration;
@@ -13,19 +14,17 @@ import java.util.concurrent.TimeUnit;
 
 public interface Platform {
 
-    // Отдает драйвер наследника
     AppiumDriver getDriver();
-
-    // Отдает настроенные Capabilities по Config
     DesiredCapabilities getCapabilities();
-
     Config.Platforms checkPlatform();
 
     // Получает инстанс Container и запускает хранящийся там драйвер
     default void runDriver() {
+        //WEB AREA
+        //WEB AREA
+
         Container container = Container.getInstance();
         AppiumDriver driver = container.getPlatform().getDriver();
-
         WebDriverRunner.setWebDriver(driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     };

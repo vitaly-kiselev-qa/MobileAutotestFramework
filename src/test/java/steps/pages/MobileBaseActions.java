@@ -3,6 +3,7 @@ package steps.pages;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
+import ui.Config;
 import ui.platforms.Android_native;
 import ui.Container;
 import ui.Platform;
@@ -25,7 +26,9 @@ public class MobileBaseActions {
 
       container.runPlatform();
       container.getPlatform().timeOut(5);
-      container.getPlatform().setContextByIndex(0);
+
+      if (Config.getCurrentPlatformName().equals(Config.Platforms.ANDROID_WEB)) { }
+
    }
 
    @After
@@ -46,6 +49,5 @@ public class MobileBaseActions {
          case "down": container.getPlatform().swipeScreen(Platform.Direction.DOWN); break;
          default: System.out.print("ERROR: unknown direction");
       }
-
    }
 }

@@ -1,7 +1,7 @@
 # language: en
 
-@smoke
-Feature: Wiki example tests
+@native
+Feature: Wiki example native tests
 
   Scenario: Swipe onboarding (fail)
     When Swipe "Left"
