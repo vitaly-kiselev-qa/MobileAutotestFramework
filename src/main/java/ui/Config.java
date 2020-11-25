@@ -6,16 +6,24 @@ import java.nio.file.Paths;
 
 public abstract class Config {
 
+    // Common area
     final private static String PLATFORM_NAME = "Android_web"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
-    final private static String DEVICE_NAME = "Device"; // Random
+    final private static String DEVICE_NAME = "Device"; // Random for everyone, exclude IOS
     final private static String PLATFORM_VERSION = "10.0"; // Current device OS version
+
+    // Appium area
+    final private static String APPIUM_VERSION = "1.18.3"; // See Appium server version
+    final private static String APPIUM_URL = "http://127.0.0.1:4723/wd/hub"; // Const, don't touch
+
+    // Web area
     final private static String WEB_BROWSER_NAME = "Chrome"; // Chrome, FF, Edge
     final private static String WEB_BROWSER_VERSION = "86"; // Check installed browser version
+
+    // Android area
     final private static String ANDROID_APP_PACKAGE = "org.wikipedia"; // Android only. See package checker
     final private static String ANDROID_APP_MAIN_ACTIVITY = "org.wikipedia.main.MainActivity"; // Android only. See - package checker
     final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/Desktop/wiki.apk");
-    final private static String APPIUM_URL = "http://127.0.0.1:4723/wd/hub"; // Const, don't touch
-    final private static String APPIUM_VERSION = "1.18.3"; // See Appium server version
+
 
     public static URL getAppiumUrl() {
         URL appiumServer = null;

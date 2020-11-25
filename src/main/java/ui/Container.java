@@ -24,7 +24,7 @@ public class Container {
             case ANDROID_WEB: platform = new Android_web(); break;
             case IOS_NATIVE: platform = new IOS_native(); break;
             case IOS_WEB: //platform = new IOS_web(); break;
-            default: System.out.print("ERROR: UNKNOWN PLATFORM"); break;
+            default: System.out.print("ERROR: UNKNOWN PLATFORM");
         }
         System.out.print("POINT: Container.setPlatform: " + platform.checkPlatform() + "\n");
     }

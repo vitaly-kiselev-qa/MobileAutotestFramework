@@ -18,7 +18,7 @@ public interface Platform {
     DesiredCapabilities getCapabilities();
     Config.Platforms checkPlatform();
 
-    // Получает инстанс Container и запускает хранящийся там драйвер
+    // Получает драйвер из Container и запускает его
     default void runDriver() {
         //WEB AREA
         //WEB AREA
@@ -29,12 +29,13 @@ public interface Platform {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     };
 
-    // Получает инстанс Container и выключает хранящийся там драйвер
+    // Получает драйвер из Container и выключает его
     default void quitDriver() {
         Container container = Container.getInstance();
         container.getPlatform().getDriver().quit();
     };
 
+    // Меняет Context по индексу - позволяет перейти с native на webview и обратно
     default void setContextByIndex(int contextIndex) {
         AppiumDriver driver = Container.getInstance().getPlatform().getDriver();
         Set<String> contextNames = driver.getContextHandles();

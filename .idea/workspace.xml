@@ -23,18 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb411f18-d5a5-4e37-8e9a-4dcd3b2ff7b6" name="Default" comment="Refactor; Add vars in cucumber steps for example;">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Container.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_native.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_native.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_web.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_web.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/RunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/RunTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/mobile_native.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/mobile_native.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/mobile_web.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/mobile_web.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/MobileBaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/pages/MobileBaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +199,7 @@
       <workItem from="1605876799773" duration="1848000" />
       <workItem from="1606119099647" duration="16773000" />
       <workItem from="1606218559329" duration="9336000" />
+      <workItem from="1606289023976" duration="2969000" />
     </task>
     <task id="LOCAL-00001" summary="Add mobile">
       <created>1604310661259</created>
