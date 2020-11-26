@@ -24,7 +24,6 @@ public abstract class Config {
     final private static String ANDROID_APP_MAIN_ACTIVITY = "org.wikipedia.main.MainActivity"; // Android only. See - package checker
     final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/Desktop/wiki.apk");
 
-
     public static URL getAppiumUrl() {
         URL appiumServer = null;
         try {

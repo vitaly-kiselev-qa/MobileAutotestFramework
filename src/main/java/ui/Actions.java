@@ -1,42 +1,18 @@
-package ui.platforms;
+package ui;
 
-import com.codeborne.selenide.WebDriverRunner;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import ui.Config;
-import ui.Container;
-
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public interface Platform {
-
-    AppiumDriver getDriver();
-    DesiredCapabilities getCapabilities();
-    Config.Platforms checkPlatform();
-
-    // Получает драйвер из Container и запускает его
-    default void runDriver() {
-        Container container = Container.getInstance();
-        AppiumDriver driver = container.getPlatform().getDriver();
-        WebDriverRunner.setWebDriver(driver);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    };
-
-    // Получает драйвер из Container и выключает его
-    default void quitDriver() {
-        Container container = Container.getInstance();
-        container.getPlatform().getDriver().quit();
-    };
+public abstract class Actions {
 
     // Меняет Context по индексу - позволяет перейти с native на webview и обратно
-    default void setContextByIndex(int contextIndex) {
+    public static void setContextByIndex(int contextIndex) {
         AppiumDriver driver = Container.getInstance().getPlatform().getDriver();
         Set<String> contextNames = driver.getContextHandles();
         int i = 0;
@@ -48,7 +24,7 @@ public interface Platform {
     }
 
     // Скроллит экран по заданному Direction
-    default void swipeScreen(Direction dir) {
+    public static void swipeScreen(Direction dir) {
         Container container = Container.getInstance();
         System.out.println("swipeScreen(): dir: '" + dir + "'"); // Логирование событий в консоль
 
@@ -98,7 +74,7 @@ public interface Platform {
     }
 
     // Слепой таймаут
-    default void timeOut (int sec){
+    public static void timeOut (int sec){
         try {
             TimeUnit.SECONDS.sleep(sec);
         } catch (Exception e) {
@@ -106,12 +82,11 @@ public interface Platform {
         }
     }
 
-    enum Direction {
+    public enum Direction {
         UP,
         DOWN,
         LEFT,
         RIGHT;
     }
-
 
 }

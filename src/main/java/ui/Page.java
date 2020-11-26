@@ -1,8 +1,13 @@
-package steps;
+package ui;
 
 import com.codeborne.selenide.SelenideElement;
-import ui.Config;
+
 import static com.codeborne.selenide.Selenide.$x;
+
+/*
+Интерфейс для страниц PageObject
+Описывает логику выбора локатора под необходимую платформу из массива локаторов для конкретного элемента
+ */
 
 public interface Page {
 
@@ -18,8 +23,8 @@ public interface Page {
     }
 
     // Записывает локаторы для всех платформ в массив и отдает нужный по индексу платформы
-    static SelenideElement setLocators(SelenideElement Android, SelenideElement ios){
-        SelenideElement[] array = {Android, ios};
+    static SelenideElement setLocatorsForNativeApps(SelenideElement android, SelenideElement ios){
+        SelenideElement[] array = {android, ios};
         return array[Page.switchLocator()];
     }
 
