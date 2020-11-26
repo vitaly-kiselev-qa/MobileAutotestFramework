@@ -1,4 +1,4 @@
-# Мультиплатформенный мобильный фреймворк для автотестов
+# Mobile Autotest framework
 #### Используемый стек:
 * **Appium** (http://appium.io)
 * **Selenide** (https://ru.selenide.org)
@@ -7,7 +7,7 @@
 * **Maven** (https://maven.apache.org/download.cgi)
 * **Allure** (http://allure.qatools.ru)
 
-# БЫСТРАЯ НАСТРОЙКА
+# Быстрая настройка
 
 #### PART 1: ПОДГОТОВКА ОКРУЖЕНИЯ
 1. Установить **Appium desktop** _https://github.com/appium/appium-desktop/releases/_
@@ -40,7 +40,7 @@
     6. Запускать эмулятор можно из **Android studio** или командой **cmd** (Сама **Android Studio** для работы эмулятора не нужна)
     
 
-#### PART 2: НАСТРОЙКА КОНФИГА, ЗАПУСК ТЕСТОВ
+#### PART 2: Настройка конфига, запуск тестов
 
 1. Запустить **Appium server**
 2. Нажать на **Start Inspector session** (Кнопка с лупой)
@@ -65,9 +65,8 @@
 с рабочего стола Пользователя
 9. Запустить конфиг Maven-а "RunTestsByMaven"
 
-# СТРУКТУРА
+# Структура
 #### Comming soon!
-# КАК ПИСАТЬ ТЕСТЫ
+# Как писать тесты
 #### Comming soon!
 
-// Как прикрепить скрин принудительно Allure.addAttachment("Any text", new ByteArrayInputStream(((TakesScreenshot) Container.getInstance().getPlatform().getDriver()).getScreenshotAs(OutputType.BYTES)));

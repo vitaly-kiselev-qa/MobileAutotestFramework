@@ -26,6 +26,11 @@ public class MainActions {
       // Добавляет скриншоты и DOM source в attachments к шагам при фейле тестов
       SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
 
+      /* Как прикрепить скрин принудительно:
+      Allure.addAttachment("Any text", new ByteArrayInputStream(((TakesScreenshot)
+      Container.getInstance().getPlatform().getDriver()).getScreenshotAs(OutputType.BYTES)));
+       */
+
       // Запускает выбранную в Config платформу
       container.runPlatform();
 
