@@ -69,3 +69,5 @@
 #### Comming soon!
 # КАК ПИСАТЬ ТЕСТЫ
 #### Comming soon!
+
+// Как прикрепить скрин принудительно Allure.addAttachment("Any text", new ByteArrayInputStream(((TakesScreenshot) Container.getInstance().getPlatform().getDriver()).getScreenshotAs(OutputType.BYTES)));

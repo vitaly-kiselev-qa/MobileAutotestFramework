@@ -1,12 +1,13 @@
 package steps.pages;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import ui.Config;
-import ui.platforms.Android_native;
 import ui.Container;
-import ui.Platform;
+import ui.platforms.Platform;
+import io.qameta.allure.selenide.AllureSelenide;
 
 /*
 Класс с основными методами взаимодействия с приложением, не зависящими от конкретных элементов Page
@@ -15,16 +16,21 @@ import ui.Platform;
 TODO: Написать методы работы с активити типа Restart the app
  */
 
-public class MobileBaseActions {
+public class MainActions {
 
    Container container = Container.getInstance();
 
    @Before
    public void startApp() {
 
-      //TODO: Сделать так, чтобы метод понимал, когда кончился Splash-screen перед прохождением др. шагов
+      // Добавляет скриншоты и DOM source в attachments к шагам при фейле тестов
+      SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
 
+      // Запускает выбранную в Config платформу
       container.runPlatform();
+
+      // Слепой таймаут чтобы законтрить splashscreen
+      // TODO: Сделать так, чтобы метод понимал, когда кончился Splash-screen перед прохождением др. шагов
       container.getPlatform().timeOut(5);
 
       if (Config.getCurrentPlatformName().equals(Config.Platforms.ANDROID_WEB)) { }

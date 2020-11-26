@@ -1,4 +1,4 @@
-package ui;
+package ui.platforms;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.appium.java_client.AppiumDriver;
@@ -8,6 +8,9 @@ import io.appium.java_client.touch.offset.PointOption;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ui.Config;
+import ui.Container;
+
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -20,13 +23,10 @@ public interface Platform {
 
     // Получает драйвер из Container и запускает его
     default void runDriver() {
-        //WEB AREA
-        //WEB AREA
-
         Container container = Container.getInstance();
         AppiumDriver driver = container.getPlatform().getDriver();
         WebDriverRunner.setWebDriver(driver);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     };
 
     // Получает драйвер из Container и выключает его

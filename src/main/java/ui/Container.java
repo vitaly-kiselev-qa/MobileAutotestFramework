@@ -1,8 +1,12 @@
 package ui;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import ui.platforms.Android_native;
 import ui.platforms.Android_web;
 import ui.platforms.IOS_native;
+import ui.platforms.Platform;
+
+
 
 public class Container {
     private Platform platform;
@@ -36,6 +40,7 @@ public class Container {
 
     // Запускает инициализированную контейнером платформу
     public void runPlatform() {
+
         setPlatform();
         platform.runDriver();
         System.out.print("POINT: Container.runPlatform: " + platform.checkPlatform() + "\n");

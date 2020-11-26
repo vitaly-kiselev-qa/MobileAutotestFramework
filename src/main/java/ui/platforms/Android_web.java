@@ -6,7 +6,6 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.Config;
-import ui.Platform;
 
 public class Android_web implements Platform {
 

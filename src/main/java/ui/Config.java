@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 public abstract class Config {
 
     // Common area
-    final private static String PLATFORM_NAME = "Android_web"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
+    final private static String PLATFORM_NAME = "Android_native"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
     final private static String DEVICE_NAME = "Device"; // Random for everyone, exclude IOS
     final private static String PLATFORM_VERSION = "10.0"; // Current device OS version
 
@@ -36,22 +36,10 @@ public abstract class Config {
     public static Platforms getCurrentPlatformName() {
         Platforms currentPlatform = null;
         switch (PLATFORM_NAME.toLowerCase()) {
-            case "android_native":
-                currentPlatform = Platforms.ANDROID_NATIVE;
-                System.out.printf("POINT: Config.getCurrentPlatformName: " + Platforms.ANDROID_NATIVE + "\n");
-                break;
-            case "android_web":
-                currentPlatform = Platforms.ANDROID_WEB;
-                System.out.printf("POINT: Config.getCurrentPlatformName: " + Platforms.ANDROID_WEB + "\n");
-                break;
-            case "ios_native":
-                currentPlatform = Platforms.IOS_NATIVE;
-                System.out.printf("POINT: Config.getCurrentPlatformName: " + Platforms.IOS_NATIVE + "\n");
-                break;
-            case "ios_web":
-                currentPlatform = Platforms.IOS_WEB;
-                System.out.printf("POINT: Config.getCurrentPlatformName: " + Platforms.IOS_WEB + "\n");
-                break;
+            case "android_native": currentPlatform = Platforms.ANDROID_NATIVE; break;
+            case "android_web": currentPlatform = Platforms.ANDROID_WEB; break;
+            case "ios_native": currentPlatform = Platforms.IOS_NATIVE; break;
+            case "ios_web": currentPlatform = Platforms.IOS_WEB; break;
             default:
                 System.out.printf("ERROR: Undefined platform: " + PLATFORM_NAME + "\n");
                 break;
