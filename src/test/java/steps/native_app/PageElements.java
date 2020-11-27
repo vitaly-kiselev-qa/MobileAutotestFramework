@@ -1,4 +1,4 @@
-package steps.pages.PageExample_native;
+package steps.native_app;
 
 import com.codeborne.selenide.SelenideElement;
 import ui.actions.Locators;

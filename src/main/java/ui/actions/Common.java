@@ -24,6 +24,16 @@ public class Common {
         }
         driver.context(contextNames.toArray()[contextIndex].toString());
     }
+    public static void setContextByName(String context) {
+
+        Set<String> contextNames = Container.getInstance().getPlatform().getDriver().getContextHandles();
+        int i = 0;
+        for (String contextName : contextNames) {
+            System.out.printf("CONTEXT ARRAY [%s], object: %s\n", i, contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+            i++;
+        }
+        Container.getInstance().getPlatform().getDriver().context(context.toUpperCase());
+    }
 
     // Скроллит экран по заданному Direction
     public static void swipeScreen(Directions dir) {

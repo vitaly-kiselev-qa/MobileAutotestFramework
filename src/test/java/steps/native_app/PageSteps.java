@@ -1,4 +1,4 @@
-package steps.pages.PageExample_native;
+package steps.native_app;
 
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.en.Then;
@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 
 
 // Класс, где хранятся основные методы экрана или страницы, которые конвертируются в методы Cucumber
-public class PageActions {
+public class PageSteps {
 
     @When("Push the button one")
     public void pushTheBtnOne() {

@@ -22,28 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb411f18-d5a5-4e37-8e9a-4dcd3b2ff7b6" name="Default" comment="Big classes refactor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/enums/Browsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/enums/Directions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/enums/Platforms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/CommonActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageElements.java" afterDir="false" />
+    <list default="true" id="fb411f18-d5a5-4e37-8e9a-4dcd3b2ff7b6" name="Default" comment="One more refactor">
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/web_app/CommonWebSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/actions/Common.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/actions/Locators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_native.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_native.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_web.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/platforms/Android_web.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/platforms/IOS_native.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/platforms/IOS_native.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/RunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/RunTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/mobile_native.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/mobile_native.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/actions/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/actions/Common.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/mobile_web.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/mobile_web.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/Common.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/Setup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_native/PageElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_native/PageElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/CommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/CommonSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_native/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/native_app/PageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_native/PageElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/native_app/PageElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/web_app/page_example/PageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/pages/PageExample_web/PageElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/web_app/page_example/PageElements.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +209,7 @@
       <workItem from="1606289023976" duration="9981000" />
       <workItem from="1606380051726" duration="1213000" />
       <workItem from="1606381459240" duration="12896000" />
-      <workItem from="1606461066556" duration="9829000" />
+      <workItem from="1606461066556" duration="12280000" />
     </task>
     <task id="LOCAL-00001" summary="Add mobile">
       <created>1604310661259</created>
@@ -370,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606395634924</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="One more refactor">
+      <created>1606472881671</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606472881671</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +404,8 @@
     <MESSAGE value="Add allure-selenide listener; Fix attachments into the steps" />
     <MESSAGE value="Add allure-selenide listener; Fix attachments into the steps." />
     <MESSAGE value="Big classes refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Big classes refactor" />
+    <MESSAGE value="One more refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="One more refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="845" y="382" key="#Notifications" timestamp="1604311196587">
@@ -441,18 +437,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604673907323" />
-    <state x="623" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604948594583">
+    <state x="623" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606473568183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="623" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606473568183" />
     <state x="623" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1604948594583" />
     <state x="743" y="384" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606392814275">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="384" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606392814275" />
-    <state x="605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606463103969">
+    <state x="605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606474530325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606463103969" />
+    <state x="605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606474530325" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604933589429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -470,25 +467,25 @@
     </state>
     <state x="730" y="386" key="Github.CreatePullRequestDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1605529255808" />
     <state x="730" y="386" key="Github.CreatePullRequestDialog/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1604954119828" />
-    <state width="1877" height="389" key="GridCell.Tab.0.bottom" timestamp="1606470696635">
+    <state width="1877" height="184" key="GridCell.Tab.0.bottom" timestamp="1606475247534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="389" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606470696635" />
+    <state width="1877" height="184" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606475247534" />
     <state width="1877" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1606079604945" />
-    <state width="1877" height="389" key="GridCell.Tab.0.center" timestamp="1606470696635">
+    <state width="1877" height="184" key="GridCell.Tab.0.center" timestamp="1606475247534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="389" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606470696635" />
+    <state width="1877" height="184" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606475247534" />
     <state width="1877" height="180" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1606079604945" />
-    <state width="1877" height="389" key="GridCell.Tab.0.left" timestamp="1606470696635">
+    <state width="1877" height="184" key="GridCell.Tab.0.left" timestamp="1606475247533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="389" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606470696635" />
+    <state width="1877" height="184" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606475247533" />
     <state width="1877" height="180" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1606079604945" />
-    <state width="1877" height="389" key="GridCell.Tab.0.right" timestamp="1606470696635">
+    <state width="1877" height="184" key="GridCell.Tab.0.right" timestamp="1606475247534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="389" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606470696635" />
+    <state width="1877" height="184" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606475247534" />
     <state width="1877" height="180" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1606079604945" />
     <state x="712" y="222" key="RollbackChangesDialog" timestamp="1605085320547">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -499,10 +496,10 @@
     </state>
     <state x="440" y="94" key="SettingsEditor/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606223131823" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.-526.1080.1880@0.0.1920.1040" timestamp="1604954049103" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606395644858">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606472892104">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606395644858" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1606472892104" />
     <state x="566" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606395043705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
