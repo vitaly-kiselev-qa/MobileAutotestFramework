@@ -4,10 +4,8 @@
 Feature: Wiki example web tests
 
   Scenario: Try to open url
-    When Open url "http://appium.io/docs/en/writing-running-appium/web/mobile-web/"
+    When Open url "https://ru.wikipedia.org/wiki/Заглавная_страница"
+    When Skip dialog window
+    When Simple swipe "Up"
+    When Simple swipe "Up"
 
-  Scenario: Skip onboarding
-    When Swipe "Down"
-
-  Scenario: Push the button (fail)
-    When Swipe "Down"

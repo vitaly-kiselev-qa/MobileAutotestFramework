@@ -4,27 +4,27 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import ui.Config;
 import ui.Platform;
+import ui.enums.Platforms;
 
 public class Android_web implements Platform {
 
-    // Создает уникальный для платформы драйвер
     private AppiumDriver driver = new AndroidDriver(Config.getAppiumUrl(), getCapabilities());
 
-    // Геттер драйвера платформы
     @Override
     public AppiumDriver getDriver() {
         return driver;
     }
 
     @Override
-    public Config.Platforms checkPlatform() {
-        return Config.Platforms.ANDROID_WEB;
+    public Platforms checkPlatform() {
+        return Platforms.ANDROID_WEB;
     }
 
-    // Геттер уникального для платформы набора Capabilities
     @Override
     public DesiredCapabilities getCapabilities() {
 
@@ -44,6 +44,7 @@ public class Android_web implements Platform {
     private void setWebDriverVersion() {
         // Костыль, чтобы подстроить ChromeDriver под мобильный Chrome
         WebDriverManager.chromedriver().browserVersion(Config.getWebBrowserVersion()).setup();
+        System.out.print("POINT: Chromedriver path: " + WebDriverManager.chromedriver().getDownloadedDriverPath() + "\n");
 
         // Скачивает необходимую версию драйвера нужного браузера
         switch (Config.getWebBrowserName().toLowerCase()) {

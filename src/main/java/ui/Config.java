@@ -1,13 +1,15 @@
 package ui;
 
+import ui.enums.Platforms;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
 
-public abstract class Config {
+public class Config {
 
     // Common area
-    final private static String PLATFORM_NAME = "Android_native"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
+    final private static String PLATFORM_NAME = "Android_web"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
     final private static String DEVICE_NAME = "Device"; // Random for everyone, exclude IOS
     final private static String PLATFORM_VERSION = "10.0"; // Current device OS version
 
@@ -67,8 +69,5 @@ public abstract class Config {
         return WEB_BROWSER_VERSION;
     }
 
-    public enum Platforms {
-        ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
-    }
 
 }

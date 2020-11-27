@@ -3,16 +3,9 @@ package steps;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import ui.Actions;
+import ui.actions.Common;
 import ui.Container;
 import io.qameta.allure.selenide.AllureSelenide;
-
-/*
-Класс с основными методами взаимодействия с приложением, не зависящими от конкретных элементов ui.Page
-Предлагаю не наполнять его новыми методами, или добавлять только "базовые" методы, подготавливающие приложение к тестированию.
-Методы для конкретных экранов должны быть реализованны отдельно в классах, логически связанных с ui.Page
-TODO: Написать методы работы с активити типа Restart the app
- */
 
 public class Setup {
 
@@ -32,14 +25,14 @@ public class Setup {
 
       // Слепой таймаут чтобы законтрить splashscreen
       // TODO: Сделать так, чтобы метод понимал, когда кончился Splash-screen перед прохождением др. шагов
-      Actions.timeOut(5);
+      Common.timeOut(5);
 
    }
 
    @After
    public void tearDown() {
-      Actions.timeOut(5);
-      Container.getInstance().quitPlatform();
+      Common.timeOut(5);
+      Container.getInstance().getPlatform().getDriver().quit();
    }
 
 }

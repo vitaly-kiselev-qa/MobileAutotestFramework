@@ -6,24 +6,22 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.Config;
 import ui.Platform;
+import ui.enums.Platforms;
 
 public class Android_native implements Platform {
 
-    // Создает уникальный для платформы драйвер
     private AppiumDriver driver = new AndroidDriver(Config.getAppiumUrl(), getCapabilities());
 
-    // Геттер драйвера платформы
     @Override
     public AppiumDriver getDriver() {
         return driver;
     }
 
     @Override
-    public Config.Platforms checkPlatform() {
-        return Config.Platforms.ANDROID_NATIVE;
+    public Platforms checkPlatform() {
+        return Platforms.ANDROID_NATIVE;
     }
 
-    // Геттер уникального для платформы набора Capabilities
     @Override
     public DesiredCapabilities getCapabilities() {
         DesiredCapabilities Capabilities = new DesiredCapabilities();

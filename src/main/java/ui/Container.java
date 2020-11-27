@@ -49,9 +49,5 @@ public class Container {
         return platform;
     }
 
-    public void quitPlatform() {
-        platform.getDriver().quit();
-    };
-
 
 }

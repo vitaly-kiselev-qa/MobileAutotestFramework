@@ -5,23 +5,21 @@ import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.Config;
 import ui.Platform;
+import ui.enums.Platforms;
 
 public class IOS_native implements Platform {
 
-    // Создает уникальный для платформы драйвер
     private AppiumDriver driver = new IOSDriver(Config.getAppiumUrl(), getCapabilities());
 
-    // Геттер драйвера платформы
     @Override
     public AppiumDriver getDriver() {
         return driver;
     }
 
-    // Геттер уникального для платформы набора Capabilities
     // TODO: Написать Capabilities под IOS
     @Override
-    public Config.Platforms checkPlatform() {
-        return Config.Platforms.IOS_NATIVE;
+    public Platforms checkPlatform() {
+        return Platforms.IOS_NATIVE;
     }
 
     @Override

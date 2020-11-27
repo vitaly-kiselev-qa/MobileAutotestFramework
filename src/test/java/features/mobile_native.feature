@@ -4,17 +4,17 @@
 Feature: Wiki example native tests
 
   Scenario: Swipe onboarding (fail)
-    When Swipe "Left"
+    When Simple swipe "Left"
     Then Feed exists "false"
     Then Feed exists "true"
-    When Swipe "Right"
+    When Simple swipe "Right"
 
   Scenario: Skip onboarding
     When Push the skip btn
     Then Feed exists "true"
-    When Swipe "Down"
+    When Simple swipe "Down"
 
   Scenario: Push the button (fail)
-    When Swipe "Down"
+    When Simple swipe "Down"
     Then Push the button one
-    Then Swipe "Up"
+    Then Simple swipe "Up"

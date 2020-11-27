@@ -1,32 +1,32 @@
 package steps.pages.PageExample_native;
 
 import com.codeborne.selenide.SelenideElement;
-import ui.Page;
+import ui.actions.Locators;
 
 // Класс ui.Page Object паттерна, где находятся локаторы всех элементов экрана
-public class PageElements implements Page {
+public class PageElements {
 
     public final static SelenideElement
-            button_one = Page.setLocatorsForNativeApps(
-                    Page.getLocatorByResourceId("android_id"), //button_payment
-                    Page.getLocatorByResourceId("ios_id")),
-            button_two = Page.setLocatorsForNativeApps(
-                    Page.getLocatorByResourceId("android_id"),
-                    Page.getLocatorByResourceId("ios_id")),
-            text_field_one = Page.setLocatorsForNativeApps(
-                    Page.getLocatorByResourceId("android_id"),
-                    Page.getLocatorByResourceId("ios_id")),
-            text_field_two = Page.setLocatorsForNativeApps(
-                    Page.getLocatorByResourceId("android_id"),
-                    Page.getLocatorByResourceId("ios_id")),
+            button_one = Locators.setLocatorsForNativeApps(
+                    Locators.getLocatorByResourceId("android_id"), //button_payment
+                    Locators.getLocatorByResourceId("ios_id")),
+            button_two = Locators.setLocatorsForNativeApps(
+                    Locators.getLocatorByResourceId("android_id"),
+                    Locators.getLocatorByResourceId("ios_id")),
+            text_field_one = Locators.setLocatorsForNativeApps(
+                    Locators.getLocatorByResourceId("android_id"),
+                    Locators.getLocatorByResourceId("ios_id")),
+            text_field_two = Locators.setLocatorsForNativeApps(
+                    Locators.getLocatorByResourceId("android_id"),
+                    Locators.getLocatorByResourceId("ios_id")),
 
     // wiki example
-            wiki_skip_btn = Page.setLocatorsForNativeApps(
-                    Page.getLocatorByResourceId("fragment_onboarding_skip_button"),
-                    Page.getLocatorByResourceId("fragment_onboarding_skip_button")),
-            wiki_feed_container = Page.setLocatorsForNativeApps(
-                    Page.getLocatorByResourceId("fragment_feed_feed"),
-                    Page.getLocatorByResourceId("fragment_feed_feed"));
+            wiki_skip_btn = Locators.setLocatorsForNativeApps(
+                    Locators.getLocatorByResourceId("fragment_onboarding_skip_button"),
+                    Locators.getLocatorByResourceId("fragment_onboarding_skip_button")),
+            wiki_feed_container = Locators.setLocatorsForNativeApps(
+                    Locators.getLocatorByResourceId("fragment_feed_feed"),
+                    Locators.getLocatorByResourceId("fragment_feed_feed"));
 }
 
 

@@ -1,18 +1,14 @@
-package ui;
+package ui.actions;
 
 import com.codeborne.selenide.SelenideElement;
+import ui.Config;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-/*
-Интерфейс для страниц PageObject
-Описывает логику выбора локатора под необходимую платформу из массива локаторов для конкретного элемента
- */
-
-public interface Page {
+public class Locators {
 
     // Отдает индекс используемой в конфиге платформы
-    static int switchLocator() {
+    private static int switchLocator() {
         int platformIndex = 0;
         switch (Config.getCurrentPlatformName()) {
             case ANDROID_NATIVE: platformIndex = 0; break;
@@ -23,13 +19,20 @@ public interface Page {
     }
 
     // Записывает локаторы для всех платформ в массив и отдает нужный по индексу платформы
-    static SelenideElement setLocatorsForNativeApps(SelenideElement android, SelenideElement ios){
+    public static SelenideElement setLocatorsForNativeApps(SelenideElement android, SelenideElement ios){
         SelenideElement[] array = {android, ios};
-        return array[Page.switchLocator()];
+        return array[Locators.switchLocator()];
     }
 
     // Метод для Android, который ищет элемент по id. Package получает из конфига
-    static SelenideElement getLocatorByResourceId(String id) {
-        return $x(String.format("//*[@resource-id='%s:id/%s']", Config.getAndroidAppPackage(), id));
+    public static SelenideElement getLocatorByResourceId(String appPackage, String id) {
+        return $x(String.format("//*[@resource-id='%s:id/%s']", appPackage, id));
+    }
+    public static SelenideElement getLocatorByResourceId(String id) {
+        return getLocatorByResourceId(Config.getAndroidAppPackage(), id);
+    }
+
+    public static SelenideElement getLocatorByText(String text) {
+        return $x(String.format("//*[@text='%s']", text));
     }
 }

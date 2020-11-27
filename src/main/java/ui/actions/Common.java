@@ -1,15 +1,17 @@
-package ui;
+package ui.actions;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
+import ui.Container;
+import ui.enums.Directions;
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public abstract class Actions {
+public class Common {
 
     // Меняет Context по индексу - позволяет перейти с native на webview и обратно
     public static void setContextByIndex(int contextIndex) {
@@ -24,7 +26,7 @@ public abstract class Actions {
     }
 
     // Скроллит экран по заданному Direction
-    public static void swipeScreen(Direction dir) {
+    public static void swipeScreen(Directions dir) {
         Container container = Container.getInstance();
         System.out.println("swipeScreen(): dir: '" + dir + "'"); // Логирование событий в консоль
 
@@ -81,12 +83,4 @@ public abstract class Actions {
             e.printStackTrace();
         }
     }
-
-    public enum Direction {
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT;
-    }
-
 }
