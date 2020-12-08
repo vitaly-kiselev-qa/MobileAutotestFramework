@@ -1,4 +1,4 @@
-package steps.web_app.page_example;
+package steps.web_app_page_example.page_example;
 
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$x;

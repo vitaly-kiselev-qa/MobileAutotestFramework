@@ -1,4 +1,4 @@
-package steps.native_app;
+package steps.native_app_page_example;
 
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.en.Then;

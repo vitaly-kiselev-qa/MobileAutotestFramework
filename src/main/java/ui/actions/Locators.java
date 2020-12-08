@@ -13,7 +13,7 @@ public class Locators {
         switch (Config.getCurrentPlatformName()) {
             case ANDROID_NATIVE: platformIndex = 0; break;
             case IOS_NATIVE: platformIndex = 1; break;
-            default: System.out.print("ERROR: Undefined platform. Android set as default platform"); break;
+            default: System.out.print("ERROR: Undefined platform. Android set as default platform");
         }
         return platformIndex;
     }

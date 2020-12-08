@@ -13,15 +13,15 @@ import java.util.concurrent.TimeUnit;
 (Тесты не знают, какой драйвер записан в контейнер)
  */
 
-public class Container {
+public class PlatformHolder {
     private Platform platform;
 
     // Singleton
-    private static Container instance;
-    private Container(){}
-    public static Container getInstance(){
+    private static PlatformHolder instance;
+    private PlatformHolder(){}
+    public static PlatformHolder getInstance(){
         if(instance == null){
-            instance = new Container();
+            instance = new PlatformHolder();
         }
         return instance;
     }

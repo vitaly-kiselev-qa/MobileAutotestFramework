@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "steps",
-        tags = "@web"
+        tags = "@native"
 )
 public class RunTest {
 }

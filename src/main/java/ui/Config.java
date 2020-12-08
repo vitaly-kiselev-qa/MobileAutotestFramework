@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 public class Config {
 
     // Common area
-    final private static String PLATFORM_NAME = "Android_web"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
+    final private static String PLATFORM_NAME = "Android_native"; // ANDROID_NATIVE, IOS_NATIVE, ANDROID_WEB, IOS_WEB
     final private static String DEVICE_NAME = "Device"; // Random for everyone, exclude IOS
     final private static String PLATFORM_VERSION = "10.0"; // Current device OS version
 
@@ -68,6 +68,5 @@ public class Config {
     public static String getWebBrowserVersion() {
         return WEB_BROWSER_VERSION;
     }
-
 
 }
