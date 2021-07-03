@@ -1,9 +1,9 @@
-package steps.common;
+package steps.app;
 
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.en.When;
+import pages.setup.Selectors;
 import ui.PlatformHolder;
-import ui.actions.Locators;
 
 import java.util.Set;
 
@@ -42,8 +42,8 @@ public class Context {
         switch (window_name.toLowerCase()) {
             case "choose search system":
                 setContextByIndex(0);
-                Locators.getLocatorByText("Google").click();
-                Locators.getLocatorByResourceId("com.android.chrome", "button_primary").click();
+                Selectors.getXpathByText("Google").click();
+                Selectors.getXpathByResourceId("com.android.chrome", "button_primary").click();
                 setContextByIndex(1);
                 break;
             default:

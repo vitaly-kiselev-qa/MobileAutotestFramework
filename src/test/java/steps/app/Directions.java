@@ -1,4 +1,4 @@
-package steps.common;
+package steps.app;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
@@ -9,6 +9,17 @@ import ui.PlatformHolder;
 import java.time.Duration;
 
 public class Directions {
+
+    @When("Simple swipe {string}")
+    public void swipeScreen(String string) {
+        switch (string.toLowerCase()) {
+            case "left": swipeScreen(ui.enums.Directions.LEFT, 300, 500); break;
+            case "right": swipeScreen(ui.enums.Directions.RIGHT, 300, 500); break;
+            case "up": swipeScreen(ui.enums.Directions.UP, 300, 500); break;
+            case "down": swipeScreen(ui.enums.Directions.DOWN,300,500); break;
+            default: System.out.print("ERROR: unknown direction");
+        }
+    }
 
     private static void swipeScreen(ui.enums.Directions dir, int animation_time, int press_time) {
         PlatformHolder platformHolder = PlatformHolder.getInstance();
@@ -58,16 +69,4 @@ public class Directions {
             // ignore
         }
     }
-
-    @When("Simple swipe {string}")
-    public void swipeScreen(String string) {
-        switch (string.toLowerCase()) {
-            case "left": swipeScreen(ui.enums.Directions.LEFT, 300, 500); break;
-            case "right": swipeScreen(ui.enums.Directions.RIGHT, 300, 500); break;
-            case "up": swipeScreen(ui.enums.Directions.UP, 300, 500); break;
-            case "down": swipeScreen(ui.enums.Directions.DOWN,300,500); break;
-            default: System.out.print("ERROR: unknown direction");
-        }
-    }
-
 }

@@ -1,4 +1,4 @@
-package steps.common;
+package steps.app;
 
 import io.cucumber.java.en.Given;
 import ui.PlatformHolder;

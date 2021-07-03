@@ -32,7 +32,7 @@ public class Android_web implements Platform {
 
         DesiredCapabilities Capabilities = new DesiredCapabilities();
         Capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator1");
-        Capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, Config.getAppiumVersion());
+        Capabilities.setCapability("appiumVersion", Config.getAppiumVersion());
         Capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         Capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Config.getPlatformVersion());
         Capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Config.getDeviceName());
