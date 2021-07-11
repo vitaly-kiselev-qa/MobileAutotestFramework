@@ -63,7 +63,7 @@
     * **PLATFORM** (Тестируемая платформа. Прим.: **Android_native**)
 8. (Android) **apk** тестового приложения переименовать в **test.apk** и кинуть на Рабочий стол (По умолчанию фрейм будет запускать **test.apk**
 с рабочего стола Пользователя
-9. Запустить конфиг Maven-а "RunTestsByMaven"
+9. Запустить файл `src/test/java/features/RunTest.java`
 
 # Структура
 #### Comming soon!
