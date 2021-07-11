@@ -14,7 +14,7 @@ public class Config {
     final private static String PLATFORM_VERSION = "10.0"; // Current device OS version
 
     // Appium area
-    final private static String APPIUM_VERSION = "1.18.3"; // See Appium server version
+    final private static String APPIUM_VERSION = "1.21.0"; // See Appium server version
     final private static String APPIUM_URL = "http://127.0.0.1:4723/wd/hub"; // Const, don't touch
 
     // Web area
@@ -24,7 +24,7 @@ public class Config {
     // Android area
     final private static String ANDROID_APP_PACKAGE = "org.wikipedia"; // Android only. See package checker
     final private static String ANDROID_APP_MAIN_ACTIVITY = "org.wikipedia.main.MainActivity"; // Android only. See - package checker
-    final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/Desktop/wiki.apk");
+    final private static String ANDROID_APP_PATH_LOCAL = System.getProperty("user.home").concat("/Desktop/test.apk");
 
     public static URL getAppiumUrl() {
         URL appiumServer = null;

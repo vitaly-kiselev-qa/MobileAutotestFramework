@@ -32,13 +32,12 @@ public class PlatformHolder {
             case ANDROID_WEB: platform = new Android_web(); break;
             case IOS_NATIVE: platform = new IOS_native(); break;
             case IOS_WEB: //platform = new IOS_web(); break;
-            default: System.out.print("ERROR: UNKNOWN PLATFORM");
+            default: throw new Error("Unknown platform!");
         }
         System.out.print("POINT: Container.setPlatform: " + platform.checkPlatform() + "\n");
     }
 
     public void runPlatform() {
-
         setPlatform();
         WebDriverRunner.setWebDriver(platform.getDriver());
         platform.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -48,6 +47,4 @@ public class PlatformHolder {
     public Platform getPlatform(){
         return platform;
     }
-
-
 }

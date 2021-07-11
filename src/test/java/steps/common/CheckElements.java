@@ -1,27 +1,42 @@
 package steps.common;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
-import pages.setup.Element;
+import pages.setup.Locator;
 import pages.setup.Hub;
 import pages.setup.Page;
 
+import java.util.List;
+import java.util.Map;
+
+import static com.codeborne.selenide.Selenide.$x;
+import static steps.app.Context.setContextByName;
+
 public class CheckElements {
 
-    @When("{string}: check elements exist")
-    public void checkElements(String page, DataTable table) {
-        Element[] elements = Hub.getPageElements(page);
-        Page.getElement(elements, "Элемент");
+    @When("^Check elements (exist|not exist)$")
+    public void checkElements(String variant, DataTable dataTable) {
 
-        System.out.println(table.asList());
+        List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
-        /*
-        [
-                {"title": "The Devil in the White City", "author": "Erik Larson"},
-                {"title": "The Lion, the Witch and the Wardrobe", "author": "C.S. Lewis"},
-                {"title": "In the Garden of Beasts", "author": "Erik Larson"}
-        ]
-         */
+        for (Map<String, String> columns : table) {
+            SelenideElement element = $x(Page.getLocator(
+                    Hub.getPageElements(columns.get("page")),
+                    columns.get("element")
+            ));
+            if (variant.contains("not")) {
+                element.shouldNotBe(Condition.exist);
+            } else {
+                element.shouldBe(Condition.exist);
+            }
 
+            System.out.println( String.format("TRY TO FIND ELEMENT\nPage:\t\t%s\nElement:\t%s\n",
+                    columns.get("page"),
+                    columns.get("element")
+                    )
+            );
+        }
     }
 }

@@ -13,9 +13,7 @@ public class Android_native implements Platform {
     private AppiumDriver driver = new AndroidDriver(Config.getAppiumUrl(), getCapabilities());
 
     @Override
-    public AppiumDriver getDriver() {
-        return driver;
-    }
+    public AppiumDriver getDriver() { return driver; }
 
     @Override
     public Platforms checkPlatform() {

@@ -1,25 +1,15 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
-import pages.setup.Element;
+import pages.setup.Locator;
 import pages.setup.Page;
-
-import static com.codeborne.selenide.Selenide.$x;
 
 public class PageObject_webApp implements Page {
 
-    Element[] elements = {
-            Element.create("1","",""),
-            Element.create("1","",""),
-            Element.create("1","",""),
-            Element.create("1","",""),
-            Element.create("1","",""),
-            Element.create("1","",""),
-            Element.create("1","",""),
+    Locator[] locators = {
     };
 
     @Override
-    public Element[] getElements() {
-        return elements;
+    public Locator[] getLocators() {
+        return locators;
     }
 }

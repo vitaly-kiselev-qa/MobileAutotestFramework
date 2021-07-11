@@ -4,13 +4,10 @@ import pages.PageObject_nativeApp;
 
 public class Hub {
 
-    public static Element[] getPageElements(String pageName) {
+    public static Locator[] getPageElements(String pageName) {
         switch (pageName) {
-            case "page one": return new PageObject_nativeApp().getElements();
-            case "page two": return new PageObject_nativeApp().getElements();
-            case "page three": return new PageObject_nativeApp().getElements();
-            case "page four": return new PageObject_nativeApp().getElements();
-            default: return new PageObject_nativeApp().getElements();
+            case "Start page": return new PageObject_nativeApp().getLocators();
+            default: throw new Error("Can't find the page: " + pageName);
         }
     }
 

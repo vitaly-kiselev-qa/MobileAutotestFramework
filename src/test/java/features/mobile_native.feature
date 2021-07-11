@@ -3,17 +3,17 @@
 @native
 Feature: Wiki example native tests
 
-  Scenario: Swipe onboarding (fail)
+  Scenario: Check elements example
+    When Start the app
+    When Check elements exist
+      | page       | element    |
+      | Start page | Header     |
+      | Start page | Sub header |
+    When Check elements not exist
+      | page       | element      |
+      | Start page | Super header |
+
+    When Simple swipe "Left"
     When Simple swipe "Left"
     When Simple swipe "Right"
 
-  Scenario: Skip onboarding
-    When Push the skip btn
-    Then Feed exists "true"
-    Then Feed exists "false"
-    When Simple swipe "Down"
-
-  Scenario: Push the button (fail)
-    When Simple swipe "Down"
-    Then Push the button one
-    Then Simple swipe "Up"
