@@ -9,6 +9,26 @@ import java.util.Set;
 
 public class Context {
 
+    @When("Switch context to {string}")
+    public void switchContextTo(String context) {
+        setContextByName(context.toUpperCase());
+    }
+
+    @When("Skip dialog window {string}")
+    public void SkipDialogWindow(String window_name) {
+
+        switch (window_name.toLowerCase()) {
+            case "choose search system":
+                setContextByIndex(0);
+                Selectors.getXpathByText("Google").click();
+                Selectors.getXpathByResourceId("com.android.chrome", "button_primary").click();
+                setContextByIndex(1);
+                break;
+            default:
+                System.out.print("ERROR: Unknown window: " + window_name);
+        }
+    }
+
     // Меняет Context по индексу - позволяет перейти с native на webview и обратно
     public static void setContextByIndex(int contextIndex) {
         AppiumDriver driver = PlatformHolder.getInstance().getPlatform().getDriver();
@@ -30,28 +50,4 @@ public class Context {
         }
         PlatformHolder.getInstance().getPlatform().getDriver().context(context.toUpperCase());
     }
-
-    @When("Switch context to {string}")
-    public void switchContextTo(String context) {
-        setContextByName(context.toUpperCase());
-    }
-
-    @When("Skip dialog window {string}")
-    public void SkipDialogWindow(String window_name) {
-
-        switch (window_name.toLowerCase()) {
-            case "choose search system":
-                setContextByIndex(0);
-                Selectors.getXpathByText("Google").click();
-                Selectors.getXpathByResourceId("com.android.chrome", "button_primary").click();
-                setContextByIndex(1);
-                break;
-            default:
-                System.out.print("ERROR: Unknown window: " + window_name);
-        }
-
-
-    }
-
-
 }

@@ -1,4 +1,4 @@
-package steps.common;
+package steps.actions;
 
 import io.cucumber.java.en.When;
 import pages.setup.Selectors;

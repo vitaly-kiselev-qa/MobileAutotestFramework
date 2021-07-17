@@ -14,6 +14,9 @@ Feature: Wiki example native tests
       | Start page | Header       | Несуществующий текст |       |
       | Start page | Sub header   | Несуществующий текст |       |
       | Start page | Super header |                      |       |
+    When Click elements
+      | page       | element      |
+      | Start page | Add lang btn |
 
     When Simple swipe "Left"
     When Simple swipe "Left"

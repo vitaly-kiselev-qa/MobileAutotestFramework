@@ -12,16 +12,12 @@ public class Setup {
 
    @Before
    public void beforeScenario() {
-
       // Добавляет скриншоты и DOM source в attachments к шагам при фейле тестов
       SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
-
    }
 
    @After
-   public void afterScenario() {
-
-   }
+   public void afterScenario() { }
 
    @BeforeClass
    public void setUp() {
