@@ -3,13 +3,9 @@ package steps.common;
 import com.codeborne.selenide.Condition;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
-import pages.setup.Hub;
-import pages.setup.Page;
-
+import objects.Element;
 import java.util.List;
 import java.util.Map;
-
-import static com.codeborne.selenide.Selenide.$x;
 
 public class CheckElements {
 
@@ -19,49 +15,24 @@ public class CheckElements {
         List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
         for (Map<String, String> columns : table) {
-            String elementRootLocator = Page.getLocator(Hub.getPageElements(columns.get("page")), columns.get("element"));
+            Element element = new Element(
+                    columns.get("page"),
+                    columns.get("element"),
+                    columns.get("index"),
+                    columns.get("container")
+            );
+            System.out.println(element.getElementInfo());
 
             if (variant.contains("not")) {
-                checkElementNotExist(
-                        elementRootLocator,
-                        columns.get("containsText"),
-                        columns.get("exactText")
-                );
+                if (columns.get("text") != null && !columns.get("text").equals("")) {
+                    element.getSelenideElement().shouldNotBe(Condition.text(columns.get("text")));
+                }
             } else {
-                checkElementExist(
-                        elementRootLocator,
-                        columns.get("containsText"),
-                        columns.get("exactText")
-                );
+                element.getSelenideElement().shouldBe(Condition.exist);
+                if (columns.get("text") != null && !columns.get("text").equals("")) {
+                    element.getSelenideElement().shouldBe(Condition.text(columns.get("text")));
+                }
             }
-        }
-    }
-
-    public void checkElementExist(
-            String elementRootLocator,
-            String containsText,
-            String exactText
-    ) {
-        $x(elementRootLocator).shouldBe(Condition.exist);
-        if (containsText != null && containsText != "") {
-            $x(elementRootLocator).shouldBe(Condition.text(containsText));
-        }
-        if (exactText != null && exactText != "") {
-            $x(elementRootLocator).shouldBe(Condition.exactText(exactText));
-        }
-    }
-
-    public void checkElementNotExist(
-            String elementRootLocator,
-            String containsText,
-            String exactText
-    ) {
-        $x(elementRootLocator).shouldNotBe(Condition.exist);
-        if (containsText != null && containsText != "") {
-            $x(elementRootLocator).shouldNotBe(Condition.text(containsText));
-        }
-        if (exactText != null && exactText != "") {
-            $x(elementRootLocator).shouldNotBe(Condition.exactText(exactText));
         }
     }
 }

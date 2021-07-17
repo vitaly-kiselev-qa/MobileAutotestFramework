@@ -1,5 +1,6 @@
 package pages.setup;
 
+import objects.Locator;
 import pages.PageObject_nativeApp;
 
 public class Hub {

@@ -1,5 +1,5 @@
 package pages.setup;
-import ui.Config;
+import objects.Locator;
 
 public interface Page {
 

@@ -1,4 +1,4 @@
-package pages.setup;
+package objects;
 
 public class Locator {
     String key, androidEl, iosEl, webEl;

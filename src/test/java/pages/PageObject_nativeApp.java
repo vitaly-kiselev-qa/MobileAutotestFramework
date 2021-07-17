@@ -1,6 +1,6 @@
 package pages;
 
-import pages.setup.Locator;
+import objects.Locator;
 import pages.setup.Page;
 
 // Класс ui.Page Object паттерна, где находятся локаторы всех элементов экрана
