@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ClickElements {
-    @When("^Click elements$")
+    @When("Click elements")
     public void clickElementsMulti(DataTable dataTable) {
 
         List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
@@ -27,7 +27,7 @@ public class ClickElements {
                     columns.get("text")
             );
             element.getSelenideElement().click();
-            Timeout.blindTimeOut(2);
+            Timeout.blindTimeOut(1);
         }
     }
 }

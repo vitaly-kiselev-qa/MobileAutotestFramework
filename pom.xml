@@ -22,8 +22,7 @@
         <allure.maven.version>2.10.0</allure.maven.version>
         <aspectj.version>1.9.6</aspectj.version>
         <allure.version>2.14.0</allure.version>
-        <cucumber.version>4.8.1</cucumber.version>
-        <junit.version>4.13.1</junit.version>
+        <cucumber.version>6.10.4</cucumber.version>
         <selenide.version>5.22.2</selenide.version>
     </properties>
 
@@ -63,8 +62,8 @@
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-cucumber4-jvm</artifactId>
-            <version>${allure.version}</version>
+            <artifactId>allure-cucumber-jvm</artifactId>
+            <version>2.14.0</version>
         </dependency>
 
         <dependency>
@@ -80,6 +79,14 @@
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
