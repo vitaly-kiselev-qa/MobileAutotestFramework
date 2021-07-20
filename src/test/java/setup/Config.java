@@ -1,6 +1,6 @@
-package ui;
+package setup;
 
-import ui.enums.Platforms;
+import enums.Platforms;
 
 import java.net.MalformedURLException;
 import java.net.URL;

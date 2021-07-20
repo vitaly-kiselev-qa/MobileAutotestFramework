@@ -1,9 +1,9 @@
-package steps.app;
+package steps.app_actions;
 
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.en.When;
-import pages.setup.Selectors;
-import ui.PlatformHolder;
+import pages.Selectors;
+import setup.PlatformHolder;
 
 import java.util.Set;
 

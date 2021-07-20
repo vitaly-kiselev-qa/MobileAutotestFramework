@@ -1,12 +1,12 @@
-package ui.platforms;
+package setup.platforms;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import ui.Config;
-import ui.Platform;
-import ui.enums.Platforms;
+import setup.Config;
+import setup.Platform;
+import enums.Platforms;
 
 public class Android_native implements Platform {
 

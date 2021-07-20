@@ -1,6 +1,7 @@
-package pages.setup;
+package pages;
 import objects.Locator;
 
+// Интерфейс, от которого нужно наследовать все PageObject
 public interface Page {
 
     Locator[] getLocators();

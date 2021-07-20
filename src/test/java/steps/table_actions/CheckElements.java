@@ -1,11 +1,11 @@
-package steps.actions;
+package steps.table_actions;
 
 
-
+import enums.Browsers;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
 import objects.Element;
-import steps.common.CheckElement;
+import steps.common_actions.ElementActions;
 
 import java.util.List;
 import java.util.Map;
@@ -17,18 +17,15 @@ public class CheckElements {
 
         List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
-        for (Map<String, String> columns : table) {
+        for (Map<String, String> item : table) {
             Element element = new Element(
-                    columns.get("page"),
-                    columns.get("element"),
-                    columns.get("index"),
-                    columns.get("container")
+                    item.get("page"),
+                    item.get("element"),
+                    item.get("index"),
+                    item.get("text"),
+                    item.get("container")
             );
-            CheckElement.check(
-                    variant,
-                    element,
-                    columns.get("text")
-            );
+            ElementActions.check(variant, element);
         }
     }
 }

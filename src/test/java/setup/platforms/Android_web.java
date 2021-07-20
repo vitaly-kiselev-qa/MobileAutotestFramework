@@ -1,15 +1,13 @@
-package ui.platforms;
+package setup.platforms;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import ui.Config;
-import ui.Platform;
-import ui.enums.Platforms;
+import setup.Config;
+import setup.Platform;
+import enums.Platforms;
 
 public class Android_web implements Platform {
 

@@ -1,11 +1,11 @@
-package steps.app;
+package steps.app_actions;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Dimension;
-import ui.PlatformHolder;
+import setup.PlatformHolder;
 import java.time.Duration;
 
 public class Directions {
@@ -13,15 +13,15 @@ public class Directions {
     @When("Simple swipe {string}")
     public void swipeScreen(String string) {
         switch (string.toLowerCase()) {
-            case "left": swipeScreen(ui.enums.Directions.LEFT, 300, 500); break;
-            case "right": swipeScreen(ui.enums.Directions.RIGHT, 300, 500); break;
-            case "up": swipeScreen(ui.enums.Directions.UP, 300, 500); break;
-            case "down": swipeScreen(ui.enums.Directions.DOWN,300,500); break;
+            case "left": swipeScreen(enums.Directions.LEFT, 300, 500); break;
+            case "right": swipeScreen(enums.Directions.RIGHT, 300, 500); break;
+            case "up": swipeScreen(enums.Directions.UP, 300, 500); break;
+            case "down": swipeScreen(enums.Directions.DOWN,300,500); break;
             default: System.out.print("ERROR: unknown direction");
         }
     }
 
-    private static void swipeScreen(ui.enums.Directions dir, int animation_time, int press_time) {
+    private static void swipeScreen(enums.Directions dir, int animation_time, int press_time) {
         PlatformHolder platformHolder = PlatformHolder.getInstance();
         System.out.println("swipeScreen(): dir: '" + dir + "'"); // Логирование событий в консоль
 

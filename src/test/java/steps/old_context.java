@@ -1,20 +1,17 @@
-package steps.actions;
+package steps;
 
 import io.cucumber.java.en.When;
-import pages.setup.Selectors;
+import pages.Selectors;
 
-import static steps.app.Context.setContextByName;
+import static steps.app_actions.Context.setContextByName;
 
-//TODO: Написать методы работы с активити типа Restart the app
+//TODO: переделать
 
-public class Elements {
+public class old_context {
 
     @When("Click element by text {string} in context {string}")
     public void clickElementByTextInContext(String system, String context) {
         setContextByName("NATIVE_APP");
         Selectors.getXpathByText(system).click();
     }
-
-
-
 }

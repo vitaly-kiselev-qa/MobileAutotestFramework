@@ -1,7 +1,7 @@
-package steps.app;
+package steps.app_actions;
 
 import io.cucumber.java.en.Given;
-import ui.PlatformHolder;
+import setup.PlatformHolder;
 
 
 public class AppState {

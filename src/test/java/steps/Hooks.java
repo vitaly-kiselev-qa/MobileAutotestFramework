@@ -6,9 +6,9 @@ import io.cucumber.java.Before;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import ui.PlatformHolder;
+import setup.PlatformHolder;
 
-public class Setup {
+public class Hooks {
 
    @Before
    public void beforeScenario() {

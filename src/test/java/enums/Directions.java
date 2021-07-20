@@ -1,4 +1,4 @@
-package ui.enums;
+package enums;
 
 public enum Directions {
     UP,

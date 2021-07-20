@@ -1,4 +1,4 @@
-package steps.actions;
+package steps.common_actions;
 
 import io.cucumber.java.en.When;
 import java.util.concurrent.TimeUnit;

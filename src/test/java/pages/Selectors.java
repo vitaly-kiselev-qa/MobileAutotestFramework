@@ -1,7 +1,7 @@
-package pages.setup;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import ui.Config;
+import setup.Config;
 
 import static com.codeborne.selenide.Selenide.$x;
 

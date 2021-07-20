@@ -1,8 +1,8 @@
-package pages;
+package pages.locators;
 
 import objects.Locator;
-import pages.setup.Page;
-import ui.Config;
+import pages.Page;
+import setup.Config;
 
 // Класс ui.Page Object паттерна, где находятся локаторы всех элементов экрана
 public class PageObject_nativeApp implements Page{

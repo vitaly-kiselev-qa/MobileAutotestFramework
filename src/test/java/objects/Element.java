@@ -1,20 +1,20 @@
 package objects;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.setup.Hub;
-import pages.setup.Page;
+import pages.Hub;
+import pages.Page;
 
 import static com.codeborne.selenide.Selenide.$x;
 
 public class Element {
 
-    String page, key, index, containerKey;
+    String page, key, index, text, containerKey;
 
-    public Element(String page, String key, String index, String containerKey) {
+    public Element(String page, String key, String index, String text, String containerKey) {
         this.page = page;
         this.key = key;
         this.index = index;
-
+        this.text = text;
         this.containerKey = containerKey;
     }
     public String getPage() {
@@ -28,6 +28,9 @@ public class Element {
             this.index = "";
         }
         return this.index;
+    }
+    public String getText() {
+        return this.text;
     }
     public String getContainerKey() {
         if (this.containerKey == null) {

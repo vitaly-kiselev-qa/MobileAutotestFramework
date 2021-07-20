@@ -1,7 +1,7 @@
-package pages;
+package pages.locators;
 
 import objects.Locator;
-import pages.setup.Page;
+import pages.Page;
 
 public class PageObject_webApp implements Page {
 

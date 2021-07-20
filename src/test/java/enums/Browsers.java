@@ -1,9 +1,6 @@
-package ui.enums;
+package enums;
 
 public enum Browsers {
-
-    // enums with code example
-
     FIREFOX("Firefox"),
     CHROME("Chrome"),
     EDGE("Edge");

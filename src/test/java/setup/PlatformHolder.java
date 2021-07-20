@@ -1,9 +1,9 @@
-package ui;
+package setup;
 
 import com.codeborne.selenide.WebDriverRunner;
-import ui.platforms.Android_native;
-import ui.platforms.Android_web;
-import ui.platforms.IOS_native;
+import setup.platforms.Android_native;
+import setup.platforms.Android_web;
+import setup.platforms.IOS_native;
 
 import java.util.concurrent.TimeUnit;
 
