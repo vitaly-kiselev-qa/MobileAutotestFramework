@@ -3,7 +3,7 @@
 * **Appium** (http://appium.io)
 * **Selenide** (https://ru.selenide.org)
 * **Java** (https://www.oracle.com/ru/java/technologies/javase-downloads.html)
-* **Cucumber 4** (https://cucumber.io)
+* **Cucumber** (https://cucumber.io)
 * **Maven** (https://maven.apache.org/download.cgi)
 * **Allure** (http://allure.qatools.ru)
 
