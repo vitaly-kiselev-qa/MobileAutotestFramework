@@ -10,23 +10,23 @@ import setup.PlatformHolder;
 
 public class Hooks {
 
-   @Before
-   public void beforeScenario() {
-      // Добавляет скриншоты и DOM source в attachments к шагам при фейле тестов
-      SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
-   }
+  @Before
+  public void beforeScenario() {
+    // Добавляет скриншоты и DOM source в attachments к шагам при фейле тестов
+    SelenideLogger.addListener(
+        "AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+  }
 
-   @After
-   public void afterScenario() { }
+  @After
+  public void afterScenario() {}
 
-   @BeforeClass
-   public void setUp() {
-      PlatformHolder.getInstance().runPlatform();
-   }
+  @BeforeClass
+  public void setUp() {
+    PlatformHolder.getInstance().runPlatform();
+  }
 
-   @AfterClass
-   public void tearDown() {
-      PlatformHolder.getInstance().getPlatform().getDriver().quit();
-   }
-
+  @AfterClass
+  public void tearDown() {
+    PlatformHolder.getInstance().getPlatform().getDriver().quit();
+  }
 }

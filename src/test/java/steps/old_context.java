@@ -5,13 +5,13 @@ import pages.Selectors;
 
 import static steps.app_actions.Context.setContextByName;
 
-//TODO: переделать
+// TODO: переделать
 
 public class old_context {
 
-    @When("Click element by text {string} in context {string}")
-    public void clickElementByTextInContext(String system, String context) {
-        setContextByName("NATIVE_APP");
-        Selectors.getXpathByText(system).click();
-    }
+  @When("Click element by text {string} in context {string}")
+  public void clickElementByTextInContext(String system, String context) {
+    setContextByName("NATIVE_APP");
+    Selectors.getXpathByText(system).click();
+  }
 }

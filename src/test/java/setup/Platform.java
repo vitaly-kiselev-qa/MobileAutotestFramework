@@ -6,7 +6,9 @@ import enums.Platforms;
 
 public interface Platform {
 
-    AppiumDriver getDriver();
-    DesiredCapabilities getCapabilities();
-    Platforms checkPlatform();
+  AppiumDriver getDriver();
+
+  DesiredCapabilities getCapabilities();
+
+  Platforms checkPlatform();
 }

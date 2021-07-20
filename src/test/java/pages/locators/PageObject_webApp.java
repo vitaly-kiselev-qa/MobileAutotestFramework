@@ -5,11 +5,10 @@ import pages.Page;
 
 public class PageObject_webApp implements Page {
 
-    Locator[] locators = {
-    };
+  Locator[] locators = {};
 
-    @Override
-    public Locator[] getLocators() {
-        return locators;
-    }
+  @Override
+  public Locator[] getLocators() {
+    return locators;
+  }
 }
